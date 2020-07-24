@@ -8,18 +8,18 @@
     <script>
         window.addEventListener("load", function() {
       let form = document.querySelector("form");
-   form.addEventListener("submit", function(event) {
+      form.addEventListener("submit", function(event) {
       let pilotName = document.querySelector("input[name=pilotName]");
       let coPilotName = document.querySelector("input[name=copilotName]");
       let userFuelLevel = document.querySelector("input[name=fuelLevel]");
       let  userCargoMass= document.querySelector("input[name=cargoMass]");
       if (pilotName.value === "" || coPolitName.value === "" ||userFuelLevel.value === " " || userCargoMass.value=== " " ) {
-         alert("All fields are required!");
+         alert("All Fields Are Required!");
          // stop the form submission
          event.preventDefault();
       
       if(!userFuelLevel.IsNaN(value) ||!userCargoMass.IsNaN(value)){
-         alert("Invalid input!");
+         alert("Invalid Input!");
          // stop the form submission
          event.preventDefault(); 
       }
@@ -48,15 +48,15 @@
                 </div>
                 <button id="formSubmit">Submit</button>
             </form>
-        </div>
-        <div id="launchStatusCheck">
-            <h2 id="launchStatus">Awaiting Information Before Launch</h2>
-            <div  id="faultyItems">
+                 </div>
+                     <div id="launchStatusCheck">
+                     <h2 id="launchStatus">Awaiting Information Before Launch</h2>
+                    <div  id="faultyItems">
                 <ol>
                     <li id="pilotStatus">Pilot Ready</li>
                     <li id="copilotStatus">Co-pilot Ready</li>
-                    <li id="fuelStatus">Fuel level high enough for launch</li>
-                    <li id="cargoStatus">Cargo mass low enough for launch</li>
+                    <li id="fuelStatus">Fuel Level High Enough for Launch</li>
+                    <li id="cargoStatus">Cargo Mass Low Enough for Launch</li>
                 </ol>
             </div>
         </div>    
