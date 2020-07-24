@@ -5,13 +5,35 @@
         <link rel = "stylesheet" type = "text/css" href = "styles.css" />
         <script src = "script.js"></script>
     </head>
+    <script>
+        window.addEventListener("load", function() {
+      let form = document.querySelector("form");
+   form.addEventListener("submit", function(event) {
+      let pilotName = document.querySelector("input[name=pilotName]");
+      let coPilotName = document.querySelector("input[name=copilotName]");
+      let userFuelLevel = document.querySelector("input[name=fuelLevel]");
+      let  userCargoMass= document.querySelector("input[name=cargoMass]");
+      if (pilotName.value === "" || coPolitName.value === "" ||userFuelLevel.value === " " || userCargoMass.value=== " " ) {
+         alert("All fields are required!");
+         // stop the form submission
+         event.preventDefault();
+      
+      if(!userFuelLevel.IsNaN(value) ||!userCargoMass.IsNaN(value)){
+         alert("Invalid input!");
+         // stop the form submission
+         event.preventDefault(); 
+      }
+    }
+   });
+});
+    </script>
     <body>
         <h1>Launch Checklist Form</h1>
         <div id="missionTarget">
             <!-- Fetch some planetary data -->
         </div> 
         <div id="launchForm">
-            <form>
+            <form method="POST">
                 <div style="display:flex; flex-direction: row; justify-content: center; align-items: center; margin: 8 0;">
                     <label>Pilot Name <input type="text" name="pilotName" id="pilotName"/></label>
                 </div>
